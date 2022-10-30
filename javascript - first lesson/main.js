@@ -110,38 +110,38 @@
 //     console.log('good evening')
 // }
 
-let tshuva = 0;
+// let tshuva = 0;
 
-function plus(numA, numB){
-    tshuva = numA+numB;
-    return tshuva
-}
-function minus(numA, numB){
-    tshuva = numA-numB;
-    return tshuva
-}
-function multi(numA, numB){
-    tshuva = numA*numB;
-    return tshuva
-}
-function division(numA, numB){
-    tshuva = numA/numB;
-    return tshuva
-}
-
-
-const result = plus(2321321312,5312455235653)
-console.log(tshuva)
-console.log(result)
+// function plus(numA, numB){
+//     tshuva = numA+numB;
+//     return tshuva
+// }
+// function minus(numA, numB){
+//     tshuva = numA-numB;
+//     return tshuva
+// }
+// function multi(numA, numB){
+//     tshuva = numA*numB;
+//     return tshuva
+// }
+// function division(numA, numB){
+//     tshuva = numA/numB;
+//     return tshuva
+// }
 
 
+// const result = plus(2321321312,5312455235653)
+// console.log(tshuva)
+// console.log(result)
 
-function calculator(num1, num2, mathFunction){
-    return mathFunction(num1, num2)
-}
 
-const res = calculator(55, 48, multi)
-console.log(res)
+
+// function calculator(num1, num2, mathFunction){
+//     return mathFunction(num1, num2)
+// }
+
+// const res = calculator(55, 48, multi)
+// console.log(res)
 
 // const res2 = calculator(36180, 9, division);
 // console.log(res2)
@@ -149,14 +149,14 @@ console.log(res)
 // const res3 = calculator(213246596, 13548647861, plus)
 // console.log(res3)
 
-function myDetails(age, height){
-    console.log('hello, my age is  '+ age + ' i am ' + height + ' cm')
-}
+// function myDetails(age, height){
+//     console.log('hello, my age is  '+ age + ' i am ' + height + ' cm')
+// }
 
-const myAge = prompt('enter your age');
-const myHeight = prompt('enter your height')
+// const myAge = prompt('enter your age');
+// const myHeight = prompt('enter your height')
 
-myDetails(myAge, myHeight)
+// myDetails(myAge, myHeight)
 
 // להראות לכולם דרך יעילה יותר
 // const day = prompt('What is the day today?');
@@ -172,3 +172,63 @@ myDetails(myAge, myHeight)
 // } else if (day === 'Saturday') {
 //     console.log('Go for a nice trip, or stay at home');
 // }
+
+// VARIABLES
+
+// const something = 'string';
+// let something2 = 50;
+// something2 = 'tusgsk';
+
+// var something3 = 'shalom' // לא משתמשים בו בכלל. תימנעו ותישארו עם השניים שלמעלה.
+
+// CONDITIONALS
+// const day = prompt('What is the day today?');
+// const hour = parseInt(prompt('What is the time?'));
+// // if(day === 'sunday','monday','tuesday','wednesday','thursday','friday')
+// if(day === 'Sunday' || day === 'Monday' || day === 'Tuesday' || day === 'Wednsday' || day === 'Thursday'){
+//     if(hour <= 9){
+//         console.log('Put Carmi in the Kindergarden');
+//     } else if (hour > 9 && hour <= 18){
+//         console.log('Go to work');
+//     } else {
+//         console.log('Go home to help with Carmi');
+//     }
+// } else if(day === 'Friday' && hour > 13) {
+//     console.log('Go to visit the family');
+// } else {
+//     console.log('Go for a nice trip, or stay at home');
+// }
+
+// FUNCTION
+// 22/10/2022 --> 22.10.2022:08:00:00
+const num4 = 50000
+let x = 5;
+
+function chooseMathOperation(numA, numB, executeFunc){
+    const answer = executeFunc(numA, numB)
+    return answer
+}
+
+function makeSum(num1, num2){
+    console.log('shalom')
+    const ans = num1+num2
+    x += num1;
+    console.log(ans)
+    return ans
+}
+function makeMinus(num1, num2){
+    console.log('shalom')
+    const ans = num1-num2
+    x -= num1;
+    console.log(ans)
+    return ans
+}
+
+const ans3 = chooseMathOperation(x, x, makeSum)
+const ans4 = chooseMathOperation(10, 7, makeMinus)
+
+const ans = makeSum(x,6);
+const ans2 = makeMinus(90, x)
+
+
+
