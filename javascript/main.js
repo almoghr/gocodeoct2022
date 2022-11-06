@@ -199,36 +199,150 @@
 //     console.log('Go for a nice trip, or stay at home');
 // }
 
-// FUNCTION
-// 22/10/2022 --> 22.10.2022:08:00:00
-const num4 = 50000
-let x = 5;
+// // FUNCTION
+// // 22/10/2022 --> 22.10.2022:08:00:00
+// const num4 = 50000
+// let x = 5;
 
-function chooseMathOperation(numA, numB, executeFunc){
-    const answer = executeFunc(numA, numB)
-    return answer
-}
+// function chooseMathOperation(numA, numB, executeFunc){
+//     const answer = executeFunc(numA, numB)
+//     return answer
+// }
 
-function makeSum(num1, num2){
-    console.log('shalom')
-    const ans = num1+num2
-    x += num1;
-    console.log(ans)
-    return ans
-}
-function makeMinus(num1, num2){
-    console.log('shalom')
-    const ans = num1-num2
-    x -= num1;
-    console.log(ans)
-    return ans
-}
+// function makeSum(num1, num2){
+//     console.log('shalom')
+//     const ans = num1+num2
+//     x += num1;
+//     console.log(ans)
+//     return ans
+// }
+// function makeMinus(num1, num2){
+//     console.log('shalom')
+//     const ans = num1-num2
+//     x -= num1;
+//     console.log(ans)
+//     return ans
+// }
 
-const ans3 = chooseMathOperation(x, x, makeSum)
-const ans4 = chooseMathOperation(10, 7, makeMinus)
+// const ans3 = chooseMathOperation(x, x, makeSum)
+// const ans4 = chooseMathOperation(10, 7, makeMinus)
 
-const ans = makeSum(x,6);
-const ans2 = makeMinus(90, x)
+// const ans = makeSum(x,6);
+// const ans2 = makeMinus(90, x)
+
+
+// exam question answering
+
+//question 1
+
+// function printMaxNumber(num1,num2){
+//     if(num1 > num2){
+//         console.log(num1)
+//     } else if (num2 > num1){
+//         console.log(num2)
+//     } else{
+//         console.log('they are equal')
+//     }
+// }
+
+// printMaxNumber(784, 37)
+// printMaxNumber(22, 37)
+// printMaxNumber(22, 22)
+
+
+// //question 2
+
+// function printMaxNumberPrompt(num1,num2){
+//     if(num1 > num2){
+//         console.log(num1)
+//     } else if (num2 > num1){
+//         console.log(num2)
+//     } else{
+//         console.log('they are equal')
+//     }
+// }
+
+// printMaxNumberPrompt(parseInt(prompt('enter first number')), Number(prompt('enter second number')))
+
+
+// //question 3
+
+// function calculator(num1, num2, operand){
+//     if(operand === "+"){
+//         return num1+num2
+//     } else if (operand === "-"){
+//         return num1-num2
+//     }else if (operand === "*"){
+//         return num1*num2
+//     } else if (operand === "/"){
+//         if(num2 === 0){
+//             console.log('ב.ח.מ')
+//         }else{
+//             return num1/num2
+//         }
+//     } else{
+//         console.log('this operand is not legal: ', operand)
+//     }
+// }
+// const answer = calculator(parseInt(prompt('enter first number')), parseInt(prompt('enter second number')), prompt('enter an opperand'))
+// console.log(answer)
+// //question 4
+
+// function plus(num1, num2){
+//     console.log(num1+num2)
+// }
+// function multi(num1, num2){
+//     console.log(num1*num2)
+// }
+
+// function calculatorWithFunctions(num1, num2, operand){
+//     if(operand === "+"){
+//         plus(num1, num2)
+//     } else if(operand === "*"){
+//         multi(num1, num2)
+//     }
+// }
+
+// calculatorWithFunctions(parseInt(prompt('enter first number')), parseInt(prompt('enter second number')), prompt('enter an opperand'));
 
 
 
+//loops
+
+// for(let i = 0; i < 101; i++){
+//     console.log(i)
+// }
+
+// for(let i = 1; i <= 10; i++){
+//     console.log(i*9)    
+// }
+
+// let number = 5
+// console.log(number++)
+
+// let number2 = 5
+// console.log(++number2)
+
+// for(let i = 0; i <= 90; i+=10){
+//     let line = '';
+
+//     for(let j = 1; j <= 10; j++){
+//        line += i+j + ' ' +  '\t'
+//     }
+    
+//     console.log(line)
+// }
+
+// let x = 0;
+
+// while(x > 0){
+//     console.log(x)
+//     x--
+// }
+
+let y = 0;
+
+do{
+    console.log(y)
+    y++
+} while(y > 5)
