@@ -340,9 +340,134 @@
 //     x--
 // }
 
-let y = 0;
+// let y = 0;
 
-do{
-    console.log(y)
-    y++
-} while(y > 5)
+// do{
+//     console.log(y)
+//     y++
+// } while(y > 5)
+
+
+// function combineStrings(str1, str2){
+//     let combined = ''
+//     for(let i = 0; i < str1.length; i++){
+//         combined += str1[i] + str2[i]
+//     }
+//     console.log(combined)
+// }
+
+// combineStrings('abc', 'def')
+
+// function combineStrings2(str1, str2){
+//     let length = str1.length > str2.length ? str1.length : str2.length
+//     // let length;
+//     // if(str1.length > str2.length){
+//     //     length = str1.length
+//     // } else{
+//     //     length = str2.length
+//     // }
+
+//     let combined = ''
+//     for(let i = 0; i < length; i++){
+//         if(str1[i]){
+//             combined += str1[i] 
+//         }
+
+//         if(str2[i]){
+//             combined += str2[i] 
+//         }
+//     }
+//     console.log(combined)
+// }
+
+// combineStrings2('123456789', '1234567321321321231890')
+
+// function unique(string){
+//     let newString = ''
+
+//     for(let i = 0; i < string.length; i++){
+//         if(newString.indexOf(string[i]) === -1){
+//             newString += string[i]
+//         }
+//     }
+//     console.log(newString)
+// }
+
+// unique('thequickbrownfoxjumpsoverthelazydog')
+
+// function unique2(string){
+//     let newString = ''
+
+//     for(let i = 0; i < string.length; i++){
+//         if(!(newString.includes(string[i]))){
+//             newString += string[i]
+//         }
+//     }
+//     console.log(newString)
+// }
+
+// unique2('thequickbrownfoxjumpsoverthelazydog')
+
+// function firstUniqueLetter(str){
+//     for(let i = 0; i < str.length; i++){
+//         if(str.indexOf(str[i]) === str.lastIndexOf(str[i])){
+//             return str[i] 
+//         }
+//     }
+// }
+
+// const uniqueLetter = firstUniqueLetter('abacddbecg')
+// console.log(uniqueLetter)
+
+
+// const doggy = {
+//     name:'venus',
+//     favoriteFood: {
+//         numberOne: 'pizza',
+//         numberTwo: 'bone'
+//     },
+//     type: 'vimerhaner',
+//     age: 13,
+//     bark: function(){
+//         alert('woof woof')
+//     },
+    
+// }
+
+// console.log(doggy)
+// console.log(doggy.age)
+// doggy['bark']()
+// console.log(doggy.type)
+
+// console.log(doggy.favoriteFood)
+// console.log(doggy.favoriteFood.numberTwo)
+// console.log(doggy['favoriteFood']['numberTwo'])
+
+// doggy.name = 'york';
+
+// console.log(doggy['age'])
+// console.log(doggy.age)
+
+// function showDoggyProperty(prop){
+//     console.log(doggy[prop])
+// }
+
+// showDoggyProperty('type')
+// showDoggyProperty('favoriteFood')
+
+// for (const prop in doggy){
+//     // console.log(property)
+//     console.log(prop + ' ' + doggy[prop])
+//     // console.log(doggy.property)
+// }
+
+const arr = ['hello', 'my', 'name', 'is', 'almog']
+
+console.log(arr[4])
+console.log(arr[arr.length-1])
+console.log(arr[2])
+
+console.log(arr[2][1])
+    for(let i = 0; i < arr.length; i++){
+        console.log(arr[i])
+    }
