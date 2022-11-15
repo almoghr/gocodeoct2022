@@ -393,7 +393,118 @@
 //     console.log(newString)
 // }
 
-// unique('thequickbrownfoxjumpsoverthelazydog')
+/// function unique2(string){
+//     let newString = ''
+
+//     for(let i = 0; i < string.length; i++){
+//         if(!(newString.includes(string[i]))){
+//             newString += string[i]
+//         }
+//     }
+//     console.log(newString)
+// }
+
+// unique2('thequickbrownfoxjumpsoverthelazydog')
+
+// function firstUniqueLetter(str){
+//     for(let i = 0; i < str.length; i++){
+//         if(str.indexOf(str[i]) === str.lastIndexOf(str[i])){
+//             return str[i] 
+//         }
+//     }
+// }
+
+// const uniqueLetter = firstUniqueLetter('abacddbecg')
+// console.log(uniqueLetter)
+
+
+// const doggy = {
+//     name:'venus',
+//     favoriteFood: {
+//         numberOne: 'pizza',
+//         numberTwo: 'bone'
+//     },
+//     type: 'vimerhaner',
+//     age: 13,
+//     bark: function(){
+//         alert('woof woof')
+//     },
+    
+// }
+
+// console.log(doggy)
+// console.log(doggy.age)
+// doggy['bark']()
+// console.log(doggy.type)
+
+// console.log(doggy.favoriteFood)
+// console.log(doggy.favoriteFood.numberTwo)
+// console.log(doggy['favoriteFood']['numberTwo'])
+
+// doggy.name = 'york';
+
+// console.log(doggy['age'])
+// console.log(doggy.age)
+
+// function showDoggyProperty(prop){
+//     console.log(doggy[prop])
+// }
+
+// showDoggyProperty('type')
+// showDoggyProperty('favoriteFood')
+
+// for (const prop in doggy){
+//     // console.log(property)
+//     console.log(prop + ' ' + doggy[prop])
+//     // console.log(doggy.property)
+// }
+
+// const arr = ['hello', 'my', 'name', 'is', 'almog']
+
+// console.log(arr[4])
+// console.log(arr[arr.length-1])
+// console.log(arr[2])
+
+// console.log(arr[2][1])
+//     for(let i = 0; i < arr.length; i++){
+//         console.log(arr[i])
+//     }
+// const newObj = {}
+// const human = {
+//     name: 'almog',
+//     age: 31,
+//     profession: 'FS TEAM LEADER'
+// }
+
+// const myPet = {
+//     name2:'venus',
+//     age2: 13,
+//     race: 'vimerhaner'
+// }
+
+// function mixObjectsIntoOne(obj1, obj2){
+    
+//     for(const prop in obj1){
+//         newObj[prop] = obj1[prop]
+//     }
+//     for(const prop in obj2){
+//         newObj[prop] = obj2[prop]
+//     }  
+//     console.log(newObj)  
+// }
+// mixObjectsIntoOne(human, myPet)
+
+// const allCats = {}
+
+// for(let i = 1; i < 6; i++){
+//     const currentCat = 'cat'+i
+
+//     // allCats[currentCat] = {color: prompt('enter the cats color')}
+
+//     allCats[currentCat] = {}
+//     allCats[currentCat].color = prompt('enter the cats color')
+// }
+// console.log(allCats)
 
 // function unique2(string){
 //     let newString = ''
@@ -461,13 +572,154 @@
 //     // console.log(doggy.property)
 // }
 
-const arr = ['hello', 'my', 'name', 'is', 'almog']
+// const arr = ['hello', 'my', 'name', 'is', 'almog']
 
-console.log(arr[4])
-console.log(arr[arr.length-1])
-console.log(arr[2])
+// console.log(arr[4])
+// console.log(arr[arr.length-1])
+// console.log(arr[2])
 
-console.log(arr[2][1])
-    for(let i = 0; i < arr.length; i++){
-        console.log(arr[i])
-    }
+// console.log(arr[2][1])
+//     for(let i = 0; i < arr.length; i++){
+//         console.log(arr[i])
+//     }
+// const newObj = {}
+// const human = {
+//     name: 'almog',
+//     age: 31,
+//     profession: 'FS TEAM LEADER'
+// }
+
+// const myPet = {
+//     name2:'venus',
+//     age2: 13,
+//     race: 'vimerhaner'
+// }
+
+// function mixObjectsIntoOne(obj1, obj2){
+    
+//     for(const prop in obj1){
+//         newObj[prop] = obj1[prop]
+//     }
+//     for(const prop in obj2){
+//         newObj[prop] = obj2[prop]
+//     }  
+//     console.log(newObj)  
+// }
+// mixObjectsIntoOne(human, myPet)
+
+// const allCats = {}
+
+// for(let i = 1; i < 4; i++){
+//     const currentCat = 'cat'+i
+
+//     // allCats[currentCat] = {color: prompt('enter the cats color')}
+
+//     allCats[currentCat] = {}
+//     allCats[currentCat].name = prompt('enter the cats name')
+// }
+
+// const guessedName = prompt('guess one of my cat\'s name')
+
+// function guessMyCatName(objects, name){
+//     for (const key in objects){
+//         if(objects[key]['name'] === name){
+//             console.log('you guessed right my cat\'s name is ' + name)
+//         } 
+//     }
+// }
+
+// guessMyCatName(allCats, guessedName)
+// console.log(allCats)
+
+// const arr = [1,2,3,4,5,6,7,8,9,10]
+// const arr2 = ['dog','cat', 'false', 'true']
+
+// arr.forEach(function(item, index){
+//     console.log(item*item+item)    
+// })
+
+// const newArr = arr2.map(function(item, index){
+//     return Date.now() + item
+// })
+// const newArr321321 = arr.map(function(item, index){
+//     return item**6
+// })
+
+// console.log(newArr321321)
+
+// // console.log(newArr)
+
+// const length = arr.push(11,12,13,2015185408)
+// // push adds an item to the end of the array and return the new length
+// console.log(length)
+// const lastEl = arr.pop()
+// // pop deletes the last element of the array and returns it
+// console.log(lastEl)
+// const length2 = arr.unshift(0)
+// // unshift adds an item to the start of the array and return the new length
+// console.log(arr)
+// console.log(length2)
+
+// console.log(arr2.indexOf('false'))
+// // like strings, gives the index of a certain item in the array, 
+// //if theres more than 1 it will stop in the first and wont show you the next 
+// //if not exist return -1 
+
+// const deletedElements =  arr.splice(5, 3)
+
+// //deletes from a position requested in the array, and amount of deleting count,
+// //returns the items deleted inside a new array
+
+// console.log(arr)
+// console.log(deletedElements)
+
+// console.log(arr2.includes('cat'))
+// // like strings, gives a boolean of a certain item in the array, if exists true else false
+// //if theres more than 1 it will stop in the first and wont show you the next 
+
+// const arr3 = ['hi', 'bye', 'guy']
+
+// const newArr3 = arr3.slice(0,1)
+// // copies from a position requested in the array, and amount of copy count not including the end,
+// //returns the items copied inside a new array
+
+// console.log(arr3)
+// console.log(newArr3)
+
+
+// const arr4 = arr2.concat(arr3, arr ,['shimi' , 'dimi'])
+// // combines two or more arrays together,
+// //must put a new constant for getting the answer 
+// //no mutation on the array that being concatanated
+// console.log(arr2)
+// console.log(arr4)
+
+
+// const filteredArr = arr4.filter(function(item, index){
+//     return item.toString().includes('i') || item.toString().includes('e')
+// })
+// //loops over an array and brings back to a new variable
+// //all of the elements that are true for a certain condition
+
+// console.log(filteredArr)
+
+// const numbersMixedArr = [1,56,87,48,35,61,84,97,85,112,5474];
+
+// const itemBiggerThan100 = numbersMixedArr.find(function(item,index){
+//     return item < 50 && item > 1
+// })
+// const itemBiggerThan100Index = numbersMixedArr.findIndex(function(item,index){
+//     return item < 50 && item > 1
+// })
+
+// console.log(itemBiggerThan100, itemBiggerThan100Index)
+
+// const arrToReverse = [1,2,3]
+// arrToReverse.reverse().map(function(item,index){
+//     console.log(item)
+// })
+// console.log(arrToReverse)
+
+// const delShiftedItem = arrToReverse.shift()
+// console.log(arrToReverse, delShiftedItem)
+
