@@ -735,18 +735,18 @@
 // ומחזירה מערך חלקי עם X איברים מסוף המערך המקורי.
 // כאשר לא מועבר X - הפונקציה תחזיר את האיבר האחרון בלבד.
 
-function last(arr, x){
-    if(!x){
-        return arr[arr.length-1]
-    }
-    const newArr = arr.slice(-x)
-    return newArr
-}
+// function last(arr, x){
+//     if(!x){
+//         return arr[arr.length-1]
+//     }
+//     const newArr = arr.slice(-x)
+//     return newArr
+// }
 
-// לדוגמא, עבור:
-console.log(last([7, 9, 0, -2]));
-console.log(last([7, 9, 0, -2],3));
-console.log(last([7, 9, 0, -2],6));
+// // לדוגמא, עבור:
+// console.log(last([7, 9, 0, -2]));
+// console.log(last([7, 9, 0, -2],3));
+// console.log(last([7, 9, 0, -2],6));
 
 // יוצג הפלט:
 // -2
@@ -781,15 +781,15 @@ console.log(noCapital(["Avi", "Dani", "shuki", "mOshe", "arik"]))
 // כתבו פונקציה שתקבל מערך של מחרוזות ותחזיר מערך חדש עם מחרוזות הפלינדרום בלבד. היעזרו באחת מתוך ה array methods ובפונקציה שכתבתם בתשובה הקודמת.
 // השתמשו בתוכנית בפונקציה זו.
 
-function palindrom(arr){
-    //option1
-    const newArr = arr.filter(function(item){
-        return item.split('').reverse().join('') === item
-    })
-    return newArr
-}
+// function palindrom(arr){
+//     //option1
+//     const newArr = arr.filter(function(item){
+//         return item.split('').reverse().join('') === item
+//     })
+//     return newArr
+// }
 
-console.log(palindrom(['12345654321', 'sbaybadysaibn', 'li il']))
+// console.log(palindrom(['12345654321', 'sbaybadysaibn', 'li il']))
 //question number 7
 
 // 7. כתבו פונקציה delAnimals המקבלת מערך של חיות ומערך נוסף של חיות למחיקה ומחזירה מערך חדש שמכיל את החיות שנשארו.
@@ -799,11 +799,11 @@ console.log(palindrom(['12345654321', 'sbaybadysaibn', 'li il']))
 // ["Horse", "Donkey"]
 // השתמשו בתוכנית בפונקציה זו.
 
-function delAnimals(animalsArr, animalsToDeleteArr){
-    const newAnimalsArr = animalsArr.filter(function(animal){
-        return !(animalsToDeleteArr.includes(animal))
-    })
-    return newAnimalsArr
-}
+// function delAnimals(animalsArr, animalsToDeleteArr){
+//     const newAnimalsArr = animalsArr.filter(function(animal){
+//         return !(animalsToDeleteArr.includes(animal))
+//     })
+//     return newAnimalsArr
+// }
 
-console.log(delAnimals(["Horse", "Cow", "Sheep", "Donkey"], ["Cow", "Sheep"]));
+// console.log(delAnimals(["Horse", "Cow", "Sheep", "Donkey"], ["Cow", "Sheep"]));
