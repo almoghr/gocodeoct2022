@@ -1,0 +1,13 @@
+.circleContainer{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.circle{
+    width: 60px;
+    height: 60px;
+    background-color: pink;
+    border-radius: 50%;
+    cursor: pointer;
+}
