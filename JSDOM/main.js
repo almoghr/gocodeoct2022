@@ -69,3 +69,50 @@
 //         element.style.backgroundColor = 'blue'
 //     })
 // })
+
+// const coloredButtons= [
+//     {color: 'red'},
+//     {color: 'yellow'},
+//     {color: 'blue'},
+//     {color: 'pink'},
+// ]
+
+// coloredButtons.forEach(function(btn){
+//     const btnEl = document.createElement(btn.tag);
+//     btnEl.innerText = btn.color;
+//     btnEl.style.backgroundColor = btn.color;
+//     btnEl.addEventListener('click', function(){document.body.style.backgroundColor = btn.color})
+//     document.body.appendChild(btnEl)
+// })
+
+const inputList = document.querySelectorAll('input')
+const submitBtn = document.querySelector('.submit')
+const formObj = {}
+
+inputList.forEach(function(inp){
+    inp.addEventListener('keypress', function(e){
+
+        // if(e.target.name === 'email'){
+        //     //enter your regex here
+        // }
+        // if(!e.target.value.includes('ap')){
+        //     inp.value = ''
+        //     return
+        // }
+        console.log(e)
+        formObj[e.target.name] = e.target.value
+
+        if(e.charCode === 13){
+            submitBtn.click()
+        }
+    })
+});
+
+
+submitBtn.addEventListener('click', function(){
+    if(!formObj.fullname || !formObj.email || !formObj.password){
+        console.log('error')
+        return
+    }
+    console.log(formObj)
+})
