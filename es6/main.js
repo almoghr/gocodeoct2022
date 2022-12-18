@@ -78,4 +78,36 @@
 //   } 
 
 //   someFunc(object1)
+// const p = document.createElement('p')
+// p.innerHTML = new Date().toLocaleTimeString()
+// document.body.append(p)
 
+// setTimeout(() => console.log("Delayed for 5 second.") , 60000)
+// const intervalId = setInterval(()=> p.innerHTML = new Date().toLocaleTimeString(), 1000)
+
+const finaleDate = new Date("December 20, 2022 00:00:00").getTime();
+let hasTimerDone = false
+const timer = () =>{
+    const now = new Date().getTime();
+    let diff = finaleDate - now;
+    // Showing the alert when the counter time finishes.
+    if(diff < 0){
+        hasTimerDone = true
+    }
+
+    let seconds = Math.floor(diff % (1000*60) / 1000);
+    seconds <= 9 ? seconds = `0${seconds}` : seconds;   
+    document.querySelector('#seconds').textContent = seconds;
+}
+timer();
+// Calling the function every 1000 milliseconds.
+
+const intId = setInterval(() => {
+    if(!hasTimerDone){
+        timer();
+}},1000);
+
+const stop = () => {
+    clearInterval(intId)
+
+}
