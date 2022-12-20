@@ -138,4 +138,3 @@ const displayFruits = (arr) => {arr.forEach((fruit) => {
 })}
 
 displayFruits(fruitsArr)
-
