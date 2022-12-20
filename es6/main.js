@@ -1,4 +1,3 @@
-
 // // console.log(hello)
 
 // // var hello = 'hello there i am almog'
@@ -65,17 +64,16 @@
 //     g:true,
 //     myNickName: 'boss'
 //   };
-  
-  
+
 //   const someFunc = ({f,e,a, myNickName,  ...rest}) => {
 //     const {one,two,three} = e
 //     console.log(rest)
 //     console.log(a,e,f)
 //     console.log(one,two,three, myNickName)
 //     //logic
-        
+
 //     return true
-//   } 
+//   }
 
 //   someFunc(object1)
 // const p = document.createElement('p')
@@ -85,29 +83,62 @@
 // setTimeout(() => console.log("Delayed for 5 second.") , 60000)
 // const intervalId = setInterval(()=> p.innerHTML = new Date().toLocaleTimeString(), 1000)
 
-const finaleDate = new Date("December 20, 2022 00:00:00").getTime();
-let hasTimerDone = false
-const timer = () =>{
-    const now = new Date().getTime();
-    let diff = finaleDate - now;
-    // Showing the alert when the counter time finishes.
-    if(diff < 0){
-        hasTimerDone = true
-    }
+// const finaleDate = new Date("December 20, 2022 00:00:00").getTime();
+// let hasTimerDone = false
+// const timer = () =>{
+//     const now = new Date().getTime();
+//     let diff = finaleDate - now;
+//     // Showing the alert when the counter time finishes.
+//     if(diff < 0){
+//         hasTimerDone = true
+//     }
 
-    let seconds = Math.floor(diff % (1000*60) / 1000);
-    seconds <= 9 ? seconds = `0${seconds}` : seconds;   
-    document.querySelector('#seconds').textContent = seconds;
-}
-timer();
-// Calling the function every 1000 milliseconds.
+//     let seconds = Math.floor(diff % (1000*60) / 1000);
+//     seconds <= 9 ? seconds = `0${seconds}` : seconds;
+//     document.querySelector('#seconds').textContent = seconds;
+// }
+// timer();
+// // Calling the function every 1000 milliseconds.
 
-const intId = setInterval(() => {
-    if(!hasTimerDone){
-        timer();
-}},1000);
+// const intId = setInterval(() => {
+//     if(!hasTimerDone){
+//         timer();
+// }},1000);
 
-const stop = () => {
-    clearInterval(intId)
+// const stop = () => {
+//     clearInterval(intId)
 
-}
+// }
+
+// const arr = [ 1,2,3,4,5,65,6,7,8,98,90,6,54,43,5423,523,5634,7,334]
+// const arr2 = []
+// arr.forEach((number) => arr2.push(number**3))
+
+// const newArr = arr.map((number) => number**3)
+
+// const filteredArr = arr.filter((number) => number < 90)
+
+// console.log(newArr, filteredArr, arr2)
+
+// function detectCollision(objects, { x: pointx, y: pointy }) {
+//   for (let i = 0; i < objects.length; i++) {
+//     const object = objects[i];
+//     const { x, y, width, height } = object;
+//     if (
+//       pointx >= x &&
+//       pointx <= x + width &&
+//       pointy >= y &&
+//       pointy <= y + height
+//     ) {
+//       return object;
+//     }
+//   }
+// }
+
+// const myObjects = [
+//   { x: 10, y: 20, width: 30, height: 30 },
+//   { x: -40, y: 20, width: 30, height: 30 },
+//   { x: 0, y: 0, width: 10, height: 5 },
+// ];
+
+// detectCollision(myObjects, { x: 5, y: 10 });

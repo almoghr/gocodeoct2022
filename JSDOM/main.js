@@ -85,12 +85,12 @@
 //     document.body.appendChild(btnEl)
 // })
 
-const inputList = document.querySelectorAll('input')
-const submitBtn = document.querySelector('.submit')
-const formObj = {}
+// const inputList = document.querySelectorAll('input')
+// const submitBtn = document.querySelector('.submit')
+// const formObj = {}
 
-inputList.forEach(function(inp){
-    inp.addEventListener('keypress', function(e){
+// inputList.forEach(function(inp){
+//     inp.addEventListener('keypress', function(e){
 
         // if(e.target.name === 'email'){
         //     //enter your regex here
@@ -99,20 +99,43 @@ inputList.forEach(function(inp){
         //     inp.value = ''
         //     return
         // }
-        console.log(e)
-        formObj[e.target.name] = e.target.value
+// })        console.log(e)
+// console.log(e)
 
-        if(e.charCode === 13){
-            submitBtn.click()
-        }
-    })
-});
+const input = document.querySelector('input')
+const fruitsContainer = document.querySelector('.fruitsContainer')
+const fruitsArr = ['apple', 'banana', 'kiwi', 'orange']
 
-
-submitBtn.addEventListener('click', function(){
-    if(!formObj.fullname || !formObj.email || !formObj.password){
-        console.log('error')
-        return
+input.addEventListener('keyup', (event) => {
+    fruitsContainer.innerHTML = ''
+    const filteredArr = fruitsArr.filter((fruit) => fruit.includes(event.target.value))
+    if(filteredArr.length > 0 ){
+        displayFruits(filteredArr)
     }
-    console.log(formObj)
+    else{
+        const noDivFound = document.createElement('div')
+        noDivFound.innerHTML= `<p>no fruit found</p>`
+
+        noDivFound.style.border = '1px solid black'
+        noDivFound.style.color = 'white'
+        noDivFound.style.background = 'red'
+        noDivFound.style.fontWeight = '800'
+        noDivFound.style.width = '100px'
+
+        fruitsContainer.appendChild(noDivFound)
+
+    }
 })
+
+const displayFruits = (arr) => {arr.forEach((fruit) => {
+    const div = document.createElement('div')
+    div.innerHTML= `<p>${fruit}</p>`
+
+    div.style.border = '1px solid black'
+    div.style.width = '100px'
+
+    fruitsContainer.appendChild(div)
+})}
+
+displayFruits(fruitsArr)
+
