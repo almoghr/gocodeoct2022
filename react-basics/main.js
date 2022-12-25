@@ -5,6 +5,39 @@
 // ReactDOM.render(ButtonElement, document.getElementById("app"))
 
 // //בהצלחה:)
+const inputsArr = [
+  {
+    fieldName: "first name",
+    placeholder: "enter your first name",
+    customClass: "input",
+    type: undefined,
+  },
+  {
+    fieldName: "first name",
+    placeholder: "enter your first name",
+    customClass: "input",
+    type: undefined,
+  },
+  {
+    fieldName: "first name",
+    placeholder: "enter your first name",
+    customClass: "input",
+    type: undefined,
+  },
+  {
+    fieldName: "first name",
+    placeholder: "enter your first name",
+    customClass: "input",
+    type: "password",
+  },
+  {
+    fieldName: "first name",
+    placeholder: "enter your first name",
+    customClass: "input",
+    type: "number",
+  },
+];
+
 
 const ButtonElement = () => {
   return (
@@ -18,9 +51,8 @@ const ButtonElement = () => {
 };
 
 const NumberList = () => {
-  const arr = [1, 1, 2, 3, 4, 5];
+  const arr = [1, 1, 2, 3, 4, 5, 6];
   const listItems = arr.map((num, index) => <li key={index}>{num}</li>);
-  console.log(listItems)
   return (
     <ul>
       <li>1</li>
@@ -28,17 +60,40 @@ const NumberList = () => {
       <li>3</li>
       <li>4</li>
       <li>5</li>
+      <li>6</li>
       {listItems}
-      {arr.map((num,index) => <li key={index+25}>{num}</li>)}
+      {arr.map((num, index) => (
+        <li key={index + 25}>{num}</li>
+      ))}
     </ul>
   );
 };
-const Container = () => {
+
+const Input = ({ fieldName, type = "text", customClass, placeholder }) => {
+  console.log({ fieldName, type, customClass, placeholder });
+  return (
+    <div className="inputContainer">
+      <label className="inputLabel">{fieldName}</label>
+      <input type={type} className={customClass} placeholder={placeholder} />
+    </div>
+  );
+};
+
+const Container = ({inputsArr}) => {
   return (
     <div>
       <ButtonElement />
       <NumberList />
+      {inputsArr.map((input) => (
+        <Input
+          fieldName={input.fieldName}
+          placeholder={input.placeholder}
+          customClass={input.customClass}
+          type={input.type}
+        />
+      ))}
     </div>
   );
 };
-ReactDOM.render(<Container />, document.getElementById("app"));
+
+ReactDOM.render(<Container inputsArr={inputsArr}/>, document.getElementById("app"));

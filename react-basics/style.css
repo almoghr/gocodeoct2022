@@ -1,0 +1,41 @@
+.inputContainer{
+    width: 300px;
+    border: 3px dashed yellow;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+.inputLabel{
+    font-size: 30px;
+    font-weight: 800;
+    color: blue;
+}
+
+.input{ 
+    border:0;
+    border-bottom:1px solid #555;  
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+  }
+.input:focus{ 
+   border:none;	
+   outline:none;
+   border-bottom:1px solid #e74c3c;	
+  }
+  
+
+  .input2{ 
+    border:0;
+    border-bottom:1px solid #888;  
+    background:transparent;
+    width:100%;
+    padding:8px 0 5px 0;
+    font-size:16px;
+  }
+.input2:focus{ 
+   border:none;	
+   outline:none;
+   border-bottom:6px solid #b6c3b6;	
+  }
