@@ -1,13 +1,27 @@
-import React from 'react'
-import './Button.css'
-
+import React, { useState } from "react";
+import "./Button.css";
 
 const Button = () => {
+  const [isAdmin, setIsAdmin] = useState(false);
+  
+  const toggleIsAdmin = () => {
+    setIsAdmin(!isAdmin);
+  };
 
-    // js logic
   return (
-    <div>Button</div>
-  )
-}
+    <div>
+      <button onClick={toggleIsAdmin}>am i admin?</button>
+      <button disabled={isAdmin} onClick={() => alert("hello")}>
+        click me!
+      </button>
+      {isAdmin && (
+        <button onClick={() => console.log("hey there mr admin")}>
+          click me only if you are admin
+        </button>
+      )}
 
-export default Button
+    </div>
+  );
+};
+
+export default Button;
