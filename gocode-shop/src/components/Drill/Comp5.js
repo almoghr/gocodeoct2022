@@ -4,7 +4,7 @@ import MyContext from "../../MyContext";
 
 const Comp5 = () => {
     
-    const {data} = useContext(MyContext);
+    const {products, setProducts} = useContext(MyContext);
 
     console.log(data)
   return (

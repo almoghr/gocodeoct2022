@@ -10,10 +10,21 @@ import MyContext from "./MyContext";
 import Comp1 from "./components/Drill/Comp1";
 
 function App() {
+  const [products,setProducts] = useState([])
+
+  const getAllProducts = async () => {
+    try{
+      const response = await fetch('productUrl')
+      const data = await response.json()
+      setProducts(data)
+    } catch(e){
+      console.log(e)
+    }
+  }
 
   const clock = useClock();
   return (
-    <MyContext.Provider>
+    <MyContext.Provider value={{products, setProducts, data:arr}}>
       <div className="App">
         {/* <Button /> */}
         {/* <Counter /> */}

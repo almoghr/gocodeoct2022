@@ -4,11 +4,6 @@ const Counter = () => {
   const [count, setCount] = useState(0);
 
 
-  const getAllProducts = async () => {
-    const reponse = await fetch('productUrl')
-    const data = await Response.json()
-    // setProducts(data)
-  }
   const increment = () => {
     setCount(count + 1);
   };
@@ -21,7 +16,6 @@ const Counter = () => {
   }
   useEffect(() => {
     //onload()
-    getAllProducts()
     console.log("only on birth of component");
     return () => {
       
