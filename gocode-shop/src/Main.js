@@ -16,7 +16,8 @@ import Auth from "./pages/Auth";
 
 function Main() {
   const [products, setProducts] = useState([]);
-  const isAuthenticated = false
+  const [isAuthenticated, setIsAuthenticated] = useState(true);
+  
   const getAllProducts = async () => {
     try {
       const response = await fetch("productUrl");
