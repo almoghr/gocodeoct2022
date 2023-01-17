@@ -73,25 +73,35 @@
 
 // // askMom();
 
-fetch("https://fakestoreapi.com/products/17")
+// fetch("https://fakestoreapi.com/products/17")
+//   .then(function (response) {
+//     return response.json();
+//   })
+//   .then(function (answer) {
+//     console.log(answer);
+//   })
+//   .catch((error) => console.log(error));
+
+
+// const getProducts = async function () {
+//   try {
+//     const response = await fetch("https://fakestoreapi.com/products");
+//     const answer = await response.json();
+
+//     console.log(answer);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// getProducts();
+
+fetch("http://127.0.0.1:8000/calculator")
   .then(function (response) {
-    return response.json();
+    return response.text();
   })
   .then(function (answer) {
     console.log(answer);
   })
   .catch((error) => console.log(error));
 
-
-const getProducts = async function () {
-  try {
-    const response = await fetch("https://fakestoreapi.com/products");
-    const answer = await response.json();
-
-    console.log(answer);
-  } catch (error) {
-    console.log(error);
-  }
-};
-
-getProducts();

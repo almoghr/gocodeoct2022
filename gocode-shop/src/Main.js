@@ -4,7 +4,7 @@ import { useClock } from "./useClock";
 import MyContext from "./MyContext";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NotFound from "./pages/NotFound";
 import YesSir from "./pages/YesSir";
 import Terms from "./pages/Terms";
@@ -20,13 +20,15 @@ function Main() {
   
   const getAllProducts = async () => {
     try {
-      const response = await fetch("productUrl");
+      const response = await fetch("http://localhost:8000/calculator");
       const data = await response.json();
-      setProducts(data);
+      console.log(data)
+      // setProducts(data);
     } catch (e) {
       console.log(e);
     }
   };
+useEffect(()=>{getAllProducts()},[])
 
   const clock = useClock();
   return (
