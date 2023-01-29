@@ -2,13 +2,16 @@
 import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
+
 import { todosAllowedUpdates } from './data/data.js'
+
 //the initialising of the server itself
 const app = express()
 
 // middlewares for the server
 app.use(express.json())
 app.use(cors())
+
 mongoose.set('strictQuery', true)
 
 //schemas
@@ -70,18 +73,18 @@ app.post('/api/todos/addTodo', async (req,res) => {
 })
 
 app.put('/api/todos/updateTodo/:id', async (req,res) => {
-    const {id} = req.params
-
+    
     const updates = Object.keys(req.body);
     const isValidOperation = updates.every((update) =>
-      todosAllowedUpdates.includes(update)
+    todosAllowedUpdates.includes(update)
     );
   
     if (!isValidOperation) {
         res.status(400).send({message: "Invalid updates"})
     }
-  
+    
     try {
+        const { id } = req.params
         const todo = await Todos.findOne({_id: id})
       if (!todo) {
         res.status(404).send({message: "todo does not exist"})
@@ -92,8 +95,6 @@ app.put('/api/todos/updateTodo/:id', async (req,res) => {
     } catch (e) {
         console.log(e)
         res.status(500).send({message:e})
-
-
     }
 
 })
