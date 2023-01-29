@@ -2,8 +2,12 @@
 import express from 'express'
 import cors from 'cors'
 import mongoose from 'mongoose'
-
+import dotenv from 'dotenv'
 import { todosAllowedUpdates } from './data/data.js'
+
+dotenv.config();
+
+const { PORT, DB_USER, DB_PASS, DB_HOST, DB_NAME } = process.env
 
 //the initialising of the server itself
 const app = express()
@@ -121,15 +125,24 @@ app.delete('/api/todos/deleteTodo/:id', async (req,res) => {
 //   useUnifiedTopology: true,
 // });
 
-mongoose.connect("mongodb://localhost:27017/todosGoCodeOctober", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+// mongodb+srv://gocode:gocode123@gocodeoctober.ghdyqqj.mongodb.net/test
+
+mongoose.connect(`mongodb+srv://${DB_USER}:${DB_PASS}@${DB_HOST}/${DB_NAME}?retryWrites=true&w=majority`,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }, (info) => {
+    app.listen(PORT,() => {
+        console.log("info", info)
+        console.log('i am listening')
+    })    
+  })
+
+// mongoose.connect("mongodb://localhost:27017/todosGoCodeOctober", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
 
 
 //listener at the bottom which concludes the 
 //listening function to fulfuill all of the requests
 
-app.listen(8000,() => {
-    console.log('i am listening on port 8000')
-})
